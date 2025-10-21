@@ -18,7 +18,7 @@ pub struct Report {
 }
 
 fn main() {
-    let schema = schemars::schema_for!(Report);
+    let schema = schemars::schema|_for!(Report);
     let schema_json = serde_json::to_string_pretty(&schema).unwrap();
     std::fs::write("report.schema.json", schema_json).unwrap();
     println!("Esquema generado en report.schema.json");
